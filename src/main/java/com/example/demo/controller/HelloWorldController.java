@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/hello")
 public class HelloWorldController {
 
+    @GetMapping
+    public String greetings(){
+        return "Greetings fellow human being - from Azure!";
+    }
+
     @GetMapping("/{name}")
     public String sayHello(@PathVariable("name") String name){
         return "Hello " + name + "!";
